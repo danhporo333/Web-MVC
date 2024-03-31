@@ -1,0 +1,101 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/*phần header*/
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+    .navbar-brand img {
+        width: calc(100% - 60%);
+        object-fit: contain;
+        text-align: center;
+    }
+
+    .navbar-brand h5 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+.navbar-nav {
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+}
+
+.navbar-nav .nav-item a:hover {
+}
+
+.container-fluid {
+    margin: 0px 212px;
+}
+
+.user a {
+    text-decoration: none;
+    color: black;
+}
+
+/*.row {
+    display: flex;
+    margin-top: calc(var(--bs-gutter-y)* -1);
+    margin-right: 0; 
+    margin-left: 0; 
+    flex-direction: row;
+}*/
+
+.row-detail {
+    display: flex;
+    align-items: flex-start;
+}
+
+.col-sm-10 {
+    /* Thêm các thuộc tính cụ thể cho các phần thông tin */
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    font-weight: bold;
+    font-size: 25px;
+    width: 36%;
+    gap: 10px;
+}
+
+.button-deatial {
+    width: 190px;
+    height: 50px;
+    transition: 0.5s;
+    border-radius: 40px;
+    font-size: 20px;
+}
+
+.button-deatial a {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+
+.button-deatial:hover {
+        background-color: black;
+        color: white;
+    }

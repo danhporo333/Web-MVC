@@ -1,0 +1,53 @@
+﻿@model Fast_Food.Models.Food
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Food</h4>
+    <hr />
+    <dl class="row-detail">
+        <dt class="col-sm-2">
+            <img src="@Model.Image" alt="Product Image" style="max-width: 200px; max-height: 200px;" />
+        </dt>
+
+        <dd class="col-sm-10">
+            <div>Tên: @Html.DisplayFor(model => model.Title)</div>
+            <div>Giá: @Html.DisplayFor(model => model.Price)</div>
+            <div>Loại: @Html.DisplayFor(model => model.Category)</div>
+            <div>Lượt Mua: @Html.DisplayFor(model => model.Rating)</div>
+            <div>
+                <button class="button-deatial">
+                    <a href="/Carts">
+                        Thêm vào giỏ hàng
+                    </a>
+                </button>
+            </div>
+        </dd>
+
+        @* <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.Category)
+        </dd>
+
+        <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.Rating)
+        </dd> *@
+
+    </dl>
+</div>
+
+@if (User.IsInRole("Admin"))
+{
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+}
